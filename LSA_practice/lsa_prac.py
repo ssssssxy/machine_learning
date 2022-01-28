@@ -92,7 +92,6 @@ for i, comp in enumerate(svd_model.components_):
 # 为了找出主题之间的不同，我们将其可视化。当然，我们无法可视化维度大于3的数据，
 # 但有一些诸如PCA和t-SNE等技术可以帮助我们将高维数据可视化为较低维度。
 # 在这里，我们将使用一种名为UMAP（Uniform Manifold Approximation and Projection）的相对较新的技术。
-
 X_topics = svd_model.fit_transform(X)
 embedding = umap.UMAP(
     n_neighbors=150,
@@ -107,3 +106,5 @@ plt.scatter(embedding[:, 0], embedding[:, 1],
 plt.show()
 
 print(1)
+
+
